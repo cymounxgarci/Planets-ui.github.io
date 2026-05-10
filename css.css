@@ -165,14 +165,7 @@ div .carousel-inner {
 /* =========================================
    Images & Forms
    ========================================= */
-/* img:hover {
-    position: relative;
-    top: 5px;
-    left: 5px;
-    color: white;
-    padding: 5px;
-    /* text-decoration: solid; -> Invalid for images, removed */
-} */
+
 
 form input {
     margin: 20px 0;
