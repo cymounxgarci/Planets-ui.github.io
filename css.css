@@ -1,76 +1,120 @@
-/* .star{
-    height: clamp(400px, calc(200px + 35vw),800px);
-    position: relative;
+/* =========================================
+   Global & Base Styles
+   ========================================= */
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box; /* Added for better width/padding management */
 }
-.star{
-    content: '';
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.1)
-        rgba(0,0,0,1)
-    );
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-} */
 
-div .carousel-inner{
-    max-width: 100%;
+body {
+    /* Fixed conflicting backgrounds: assuming dark theme since text is white */
+    background-color: #000; 
+    margin: 0;
+    padding: 0;
 }
-.Plan{
-    color: gold;
-    font-weight: 1000;
-    font-size: larger;
+
+body::-webkit-scrollbar {
+    display: none;
 }
-.navbar-brand:hover{
-    color: red;
+
+p {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h2:hover {
     text-decoration: underline;
 }
-.navbar-brand{
-    color: red;
-    font-size: larger;
-    font-weight: 1000;
+
+h5 {
+    color: white;
+    font-weight: 700;
 }
-.navbar{
-    background-color: black;
+
+h5:hover {
+   text-decoration: underline; 
 }
-.nav-link{
+
+hr {
     color: white;
 }
-.nav-link:hover{
+
+/* =========================================
+   Selection Highlight Colors
+   ========================================= */
+body p::selection {
+    color: goldenrod;
+}
+
+h2::selection,
+h5::selection {
+    color: gold;
+}
+
+/* =========================================
+   Typography & Links
+   ========================================= */
+.Plan {
+    color: gold;
+    font-weight: 900; /* Changed from 1000 to standard max 900 */
+    font-size: larger;
+}
+
+/* =========================================
+   Navigation
+   ========================================= */
+.navbar {
+    background-color: black;
+}
+
+.navbar-brand {
+    color: red;
+    font-size: larger;
+    font-weight: 900;
+}
+
+.navbar-brand:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
     color: gold;
     text-decoration: underline;
 }
-*{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-body{
-    background: f1fbff;
-}
-.section-padding{
-    padding: 100px 0;
-}
-.carousel-item{
-    height: 100vb;
-    min-height: 300px;
-}
-.carousel-caption{
-    bottom: 220px;
-    z-index: 2;
-}
-.carousel-caption h5{
-    font-size: 45px;
+
+.navbar-nav a {
+    font-size: 15px;
     text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
     letter-spacing: 2px;
-    margin-top: 25px;
 }
-.carousel-caption p{
-    width: 60%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.9; 
+
+/* =========================================
+   Carousel & Layout Sections
+   ========================================= */
+div .carousel-inner {
+    max-width: 100%;
 }
-.carousel-inner::before{
+
+.carousel-inner::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -80,98 +124,57 @@ body{
     background: rgba(0,0,0,0.7);
     z-index: 1;
 }
-.navbar-nav a{
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
+
+.carousel-item {
+    height: 100vh; /* Changed 100vb to 100vh for standard viewport height */
+    min-height: 300px;
 }
-.navbar-light .navbar-brand{
-    color: #000;
-    font-size: 25px;
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    font-size: 45px;
     text-transform: uppercase;
-    font-weight: 700;
     letter-spacing: 2px;
+    margin-top: 25px;
 }
-.w-100{
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9; 
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.w-100 {
     height: 100vh;
 }
 
-.card-body i{
+.card-body i {
     font-size: 50px;
     text-align: center;
 }
-p{
-    color: white;
-}
-h2{
-    color: white;
-}
-hr{
-    color: white;
-}
-body{
-    background-color: #000;
-.star{
-    width: 100%;
-}
-}
-body::-webkit-scrollbar{
-    display: none;
-}
-p{
-    width: 100%;
-    text-align: center;
-}
-.star{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-img:hover{
+
+/* =========================================
+   Images & Forms
+   ========================================= */
+/* img:hover {
     position: relative;
     top: 5px;
     left: 5px;
-    text-decoration: solid;
     color: white;
     padding: 5px;
-}
-h2{
-    text-align: center;
-}
-h5:hover{
-   text-decoration: underline; 
-}
-h5{
-    color: white;
-    font-weight: 700;
-}
-h2:hover{
-    text-decoration: underline;
-}
-footer{
-    background-color: orange;
-    color: black;
-    padding: 2px;
-    text-align: center;
-}
-footer p{
-    color: #000;
-}
-footer{
-    text-align: center;
-}
-body p::selection{
-    color: goldenrod;
-}
-h2::selection{
-    color: gold;
-}
-h5::selection{
-    color: gold;
-}
+    /* text-decoration: solid; -> Invalid for images, removed */
+} */
 
-form input{
+form input {
     margin: 20px 0;
     padding: 5px 5px;
     font-size: 24px;
@@ -179,116 +182,117 @@ form input{
     border: 4px dashed red;
 }
 
-.join{
+.join {
     background-color: black;
     text-align: center;
     padding: 30px 20px;
     color: #4b4b4b;
 }
-.join h2{
+
+.join h2 {
     font-size: 30px;
 }
 
-/* responsive */
-@media only screen and (min-width: 768px) and (max-width:991px){
-    .carousel-caption{
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background-color: orange;
+    color: black;
+    padding: 2px;
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+}
+
+/* =========================================
+   Background Star Element
+   ========================================= */
+.star {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    /* If you want to use your commented out gradient, add it here */
+}
+
+/* =========================================
+   Responsive Media Queries
+   ========================================= */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .carousel-caption {
         bottom: 370px;
     }
-    .carousel-caption p{
+    .carousel-caption p {
         width: 100%;
     }
-    .about-text{
+    .about-text, 
+    .container {
         text-align: center;
     }
-    .card{
+    .card {
         margin-bottom: 30px;
     }
-    .container{
-        text-align: center;
-    }
-    p{
-        width: 100%;
-    }
 }
-@media only screen and (max-width:767px){
-    .navbar-nav{
+
+@media only screen and (max-width: 767px) {
+    .navbar-nav,
+    .about-text,
+    .container {
         text-align: center;
     }
-    .carousel-caption p{
-    width: 100%;
-    }
-    .carousel-caption{
+    .carousel-caption {
         bottom: 125px;
     }
-    .carousel-caption h5{
+    .carousel-caption h5 {
         font-size: 17px;
     }
-    .carousel-caption a{
+    .carousel-caption a {
         padding: 10px 15px;
     }
-    .carousel-caption p{
+    .carousel-caption p {
         width: 100%;
         line-height: 1.6;
         font-size: 12px;
     }
-    .about-text{
+}
+
+@media only screen and (max-width: 667px) {
+    body {
+        max-width: 100%;
+    }
+    .carousel-caption {
+        bottom: 125px;
+    }
+    .carousel-caption p {
+        width: 100%;
+    }
+    .container {
         text-align: center;
     }
-    .container{
-        text-align: center;
+}
+
+@media only screen and (max-width: 653px) {
+    body {
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
     }
-    p{
+    .container {
+        text-align: center;
         width: 100%;
     }
 }
 
-@media only screen and (max-width: 667px){
-    .carousel-caption p{
-        width: 100%;
-        }
-        .carousel-caption p{
-            width: 100%;
-            }
-            .carousel-caption{
-                bottom: 125px;
-            }
-            body{
-                max-width: 100%;
-                padding: 0;
-                margin: 0;
-            }
-            .container{
-                text-align: center;
-            }
-            p{
-                width: 100%;
-            }
-}
-@media only screen and (max-width: 653px){
-    body{
-        width: 100%;
-        top: 0px;
-        left: 0px;
-        right: 0px;
-        max-width: 100%;
-        
-    }
-    .container{
-        text-align: center;
-        width: 100%;
-    }
-    p{
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 280px){
-    .body{
+@media only screen and (max-width: 280px) {
+    /* Fixed: Was .body (class), changed to body (element) */
+    body {
          width: 100%;
     }
-    .container{
+    .container {
         text-align: center;
-    }
-    p{
-        width: 100%;
     }
 }
